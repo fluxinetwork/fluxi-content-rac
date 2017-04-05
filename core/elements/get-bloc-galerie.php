@@ -33,14 +33,14 @@
 			elseif( $type_galerie == 'galerie_vignettes' ):
 				$fluxi_content_galerie .= '<aside class="fc__gallery"><ul class="c-gallery js-gallery-vignettes">';
 					foreach( $galerie as $image ):
-						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['single'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
+						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
 					endforeach;
 				$fluxi_content_galerie .= '</ul></aside>';
 
 			else:
 				$fluxi_content_galerie .= '<aside class="fc__gallery"><ul class="c-gallery js-gallery-slider">';
 					foreach( $galerie as $image ):
-						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['single'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
+						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
 					endforeach;
 				$fluxi_content_galerie .= '</ul></aside>';
 

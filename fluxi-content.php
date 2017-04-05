@@ -124,6 +124,7 @@ if( ! class_exists('fluxicontent') ) :
 			// fluxicontent
 			wp_register_script( 'fluxicontent', FC_PLUGIN_URL . 'assets/js/fluxicontent.js', array('jQuery','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','lg-video','lightgallery'), null, true );
 
+
 			// Enqueue
 			wp_enqueue_script( 'fluxicontent' );
 
@@ -152,7 +153,6 @@ if( ! class_exists('fluxicontent') ) :
 	 * Include Fluxi content elements functions
 	 */
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-titre.php' );
-	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-sous-titre.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-texte.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-image.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-liste.php' );
@@ -243,11 +243,11 @@ if( ! class_exists('fluxicontent') ) :
 
 			    while ( have_rows('elements_page', $post_id) ) : the_row();
 
-			        if ( get_row_layout() == 'titre' ):
-						$all_fluxi_content .= get_bloc_titre ();
+			        if ( get_row_layout() == 'titre_1' ):
+						$all_fluxi_content .= get_bloc_titre_1 ();
 
-					elseif ( get_row_layout() == 'sous-titre' ):
-						$all_fluxi_content .= get_bloc_sous_titre ();
+					elseif ( get_row_layout() == 'titre_2' ):
+						$all_fluxi_content .= get_bloc_titre_2 ();
 
 					elseif ( get_row_layout() == 'texte' ):
 						$all_fluxi_content .= get_bloc_texte ();
