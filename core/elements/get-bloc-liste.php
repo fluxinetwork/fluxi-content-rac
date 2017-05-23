@@ -20,14 +20,14 @@
 
 			($type_liste == 'numero' ? $type_liste = 'ol' : $type_liste = 'ul');
 
-			$fluxi_content_liste = '<'.$type_liste.' class="c-list">';
+			$fluxi_content_liste = '<'.$type_liste.' class="fc-list">';
 				while( have_rows('element_liste') ): the_row();
 
 					$type_element = get_sub_field('type_element');
 					$texte_liste = get_sub_field('texte_element');
 
-					$fluxi_content_liste .= '<li class="c-list__item">';
-					$fluxi_content_liste .= $type_element == 'lien' ? '<a href="'.get_sub_field('url_lien').'" class="c-list__item">'.$texte_liste.'</a>' : $texte_liste;
+					$fluxi_content_liste .= '<li class="fc-list__item">';
+					$fluxi_content_liste .= $type_element == 'lien' ? '<a href="'.get_sub_field('url_lien').'" class="fc-list__item">'.$texte_liste.'</a>' : $texte_liste;
 					$fluxi_content_liste .= '</li>';
 
 				endwhile;

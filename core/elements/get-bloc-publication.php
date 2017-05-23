@@ -20,7 +20,7 @@
 
 			$couverture = get_sub_field('couverture');
 
-			$fluxi_content_publication = '<a href="'.get_sub_field('fichier_referent').'" class="c-newsH fc__item fc__publication">';
+			$fluxi_content_publication = '<a href="'.get_sub_field('fichier_referent').'" class="c-newsH fc-item fc__publication">';
 			$fluxi_content_publication .= '<div class="c-newsH__img" style="background-image: url('.$couverture['sizes']['publi'].')"></div>';
 			$fluxi_content_publication .= '<div class="c-newsH__body">';
 			$fluxi_content_publication .= '<span class="c-newsH__body__meta">Publication</span>';

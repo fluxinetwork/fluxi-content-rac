@@ -23,7 +23,7 @@
 			global $isMobile;
 			($isMobile) ? $img_size = 'thumb2x' : $img_size = 'thumbnail';
 
-			$output = '<a href="mailto:'.get_field('mail_contact', $equipier_id).'" class="c-newsH c-newsH--contact fc__item fc__contact">';
+			$output = '<a href="mailto:'.get_field('mail_contact', $equipier_id).'" class="c-newsH c-newsH--contact fc-item fc__contact">';
 			$output .= '<div class="c-newsH__img" style="background-image: url('.$photo['sizes'][$img_size].')"></div>';
 			$output .= '<div class="c-newsH__body">';
 			$output .= '<span class="c-newsH__body__meta">Contact</span>';

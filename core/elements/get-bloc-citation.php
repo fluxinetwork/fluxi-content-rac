@@ -17,7 +17,7 @@
 		
 		if($fluxi_content_citation):
 
-			$fluxi_content_citation = '<blockquote class="fc-item fc-blockquote">'.$fluxi_content_citation.'</blockquote>';
+			$fluxi_content_citation = '<blockquote class="fc-item fc-blockquote"><div class="fc-blockquote__content"><h2 class="t-post-title fc-blockquote__title">'.$fluxi_content_citation.'</h2></div></blockquote>';
 
 			return $fluxi_content_citation;	
 

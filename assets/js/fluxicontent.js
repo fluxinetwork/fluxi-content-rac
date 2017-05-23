@@ -54,11 +54,25 @@
     }
     // -- Accordéons
     if($('.js-accordeon').length){
-        $('.js-accordeon').click( function(e) {  
-            $('.js-accordeon.is-open').removeClass('is-open').find('div').slideToggle(); 
-            $(this).toggleClass('is-open').find('div').slideToggle();     
+        $('.js-accordeon').click( function(e) {   
+            var same = ($(this).hasClass('is-open')) ? true : false;
+            
+            var closing = $('.js-accordeon.is-open');
+            var icon = closing.find('.js-accordeon-icon');
+            var content = closing.find('.js-accordeon-content');
+            closing.removeClass('is-open');
+            icon.html('+');
+            content.slideToggle(); 
+
+            if ( !same ) {
+              icon = $(this).find('.js-accordeon-icon');
+              content = $(this).find('.js-accordeon-content');
+              $(this).toggleClass('is-open');  
+              icon.html('-');
+              content.slideToggle();
+            }
         });
-        $('.js-accordeon').find('div').slideToggle();
+        $('.js-accordeon-content').slideToggle();
     }
 
     if($('.js-is-lightbox').length){

@@ -17,16 +17,16 @@
 
 		if( $fluxi_content_accordeon ):
 
-			$fluxi_content_accordeon = '<div class="fc__accordeon fc__item js-accordeon">';
+			$fluxi_content_accordeon = '<div class="fc-accordeon fc-item js-accordeon">';
 
-			$fluxi_content_accordeon .= '<h2 class="fc__accordeon__title">';
-			$fluxi_content_accordeon .= '<i class="fa fa-chevron-right fc__accordeon__icon" aria-hidden="true"></i>';
-			$fluxi_content_accordeon .= '<span>'.get_sub_field('titre_accordeon').'</span>';
-			$fluxi_content_accordeon .= '</h2>';
+			$fluxi_content_accordeon .= '<div class="fc-accordeon__header">';
+			$fluxi_content_accordeon .= '<h2 class="t-post-title">'.get_sub_field('titre_accordeon').'</h2>';
+			$fluxi_content_accordeon .= '<span class="fc-accordeon__header__icon js-accordeon-icon" aria-hidden="true">+</span>';
+			$fluxi_content_accordeon .= '</div>';
 
 			if( have_rows('contenu_accordeon') ):				
 
-				$fluxi_content_accordeon .= '<div class="fc__accordeon__content">';
+				$fluxi_content_accordeon .= '<div class="fc-accordeon__content js-accordeon-content">';
 
 				while( have_rows('contenu_accordeon') ): the_row(); 
 
