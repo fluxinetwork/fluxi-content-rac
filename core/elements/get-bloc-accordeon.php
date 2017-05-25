@@ -11,7 +11,7 @@
 	 *  @return HTML - ACF accordeon fields
 	 */
 
-	function get_bloc_accordeon (){
+	function get_bloc_accordeon() {
 
 		$fluxi_content_accordeon = get_sub_field('titre_accordeon');		
 

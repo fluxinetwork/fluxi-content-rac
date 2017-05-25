@@ -163,7 +163,7 @@ if( ! class_exists('fluxicontent') ) :
 	//require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-publication.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-focus.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-lien.php' );
-	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-accordeon.php' );
+	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-chiffre-cle.php' );
 
 	/**
 	 * fluxi_content_save
@@ -282,8 +282,8 @@ if( ! class_exists('fluxicontent') ) :
 					elseif ( get_row_layout() == 'accordeon' ):
 						$all_fluxi_content .= get_bloc_accordeon();
 
-					//elseif ( get_row_layout() == 'formateree' ):
-					//	$all_fluxi_content .= get_bloc_formateree();
+					elseif ( get_row_layout() == 'chiffre_cle' ):
+						$all_fluxi_content .= get_bloc_chiffre_cle();
 
 			        endif;
 
