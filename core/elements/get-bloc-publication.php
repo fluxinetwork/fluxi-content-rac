@@ -18,10 +18,10 @@
 
 		if( $titre_publication ):
 
-			$couverture = get_sub_field('couverture');
+			$visuel = get_sub_field('visuel');
 
-			$fluxi_content_publication = '<a href="'.get_sub_field('fichier_referent').'" class="c-newsH fc-item fc__publication">';
-			$fluxi_content_publication .= '<div class="c-newsH__img" style="background-image: url('.$couverture['sizes']['publi'].')"></div>';
+			$fluxi_content_publication = '<a href="'.get_sub_field('url_publication').'" class="c-newsH fc-item fc__publication">';
+			$fluxi_content_publication .= '<div class="c-newsH__img" style="background-image: url('.$visuel['sizes']['thumbnail'].')"></div>';
 			$fluxi_content_publication .= '<div class="c-newsH__body">';
 			$fluxi_content_publication .= '<span class="c-newsH__body__meta">Publication</span>';
 			$fluxi_content_publication .= '<h1 class="c-newsH__body__title">'.$titre_publication.'</h1>';

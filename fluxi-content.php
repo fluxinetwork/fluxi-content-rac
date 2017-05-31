@@ -156,11 +156,12 @@ if( ! class_exists('fluxicontent') ) :
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-texte.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-image.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-liste.php' );
-	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-citation.php' );	
+	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-citation.php' );
+	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-chiffre-cle.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-galerie.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-code.php' );
 	//require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-contact.php' );
-	//require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-publication.php' );
+	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-publication.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-focus.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-lien.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-chiffre-cle.php' );
@@ -184,7 +185,9 @@ if( ! class_exists('fluxicontent') ) :
 		    // Only for post & page
 		    if ( get_post_type($post_id) == 'post'
 		    	|| get_post_type($post_id) == 'page'
-		    	|| get_post_type($post_id) == 'outils' ):
+		    	|| get_post_type($post_id) == 'outils' 
+		    	|| get_post_type($post_id) == 'solutions'
+		    	|| get_post_type($post_id) == 'assos-membres' ):
 		    	// If there is no ACF
 			 	if( empty($_POST['acf']) )
 			        return;
@@ -261,6 +264,9 @@ if( ! class_exists('fluxicontent') ) :
 					elseif ( get_row_layout() == 'citation' ):
 						$all_fluxi_content .= get_bloc_citation ();
 
+					elseif ( get_row_layout() == 'chiffre_cle' ):
+						$all_fluxi_content .= get_bloc_chiffre_cle ();
+
 					elseif ( get_row_layout() == 'galerie' ):
 						$all_fluxi_content .= get_bloc_galerie();
 
@@ -270,8 +276,8 @@ if( ! class_exists('fluxicontent') ) :
 					//elseif ( get_row_layout() == 'contact' ):
 					//	$all_fluxi_content .= get_bloc_contact();
 
-					//elseif ( get_row_layout() == 'publication' ):
-					//	$all_fluxi_content .= get_bloc_publication();
+					elseif ( get_row_layout() == 'publication' ):
+						$all_fluxi_content .= get_bloc_publication();
 
 					elseif ( get_row_layout() == 'focus' ):
 						$all_fluxi_content .= get_bloc_focus();
