@@ -17,7 +17,9 @@
 
 		if( $code ):
 
-			$output = '<p class="fitvid fc-item">'.$code.'</p>';
+			$output = '<div class="fitvid fc-item">';
+			$output .= $code;
+			$output .= '</div>';
 			return $output;
 	
 		endif;
