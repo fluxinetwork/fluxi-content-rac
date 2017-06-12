@@ -165,6 +165,7 @@ if( ! class_exists('fluxicontent') ) :
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-focus.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-lien.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-chiffre-cle.php' );
+	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-accordeon.php' );
 
 	/**
 	 * fluxi_content_save
