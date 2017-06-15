@@ -27,7 +27,17 @@
 					$texte_liste = get_sub_field('texte_element');
 
 					$fluxi_content_liste .= '<li class="fc-list__item">';
-					$fluxi_content_liste .= $type_element == 'lien' ? '<a href="'.get_sub_field('url_lien').'" class="fc-list__item">'.$texte_liste.'</a>' : $texte_liste;
+
+						if( $type_element == 'lien' ):
+							$fluxi_content_liste .= '<a href="'.get_sub_field('url_lien').'" class="fc-list__item">'.$texte_liste.'</a>';
+						elseif ( $type_element == 'texte' ) :
+							$fluxi_content_liste .= $texte_liste;
+						elseif ( $type_element == 'wysiwig' ) :
+							$fluxi_content_liste .= get_sub_field('editeur');
+						else :	
+							#nop
+						endif;
+
 					$fluxi_content_liste .= '</li>';
 
 				endwhile;
