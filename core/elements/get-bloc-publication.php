@@ -13,24 +13,23 @@
 
 	function get_bloc_publication(){
 			
-		$titre_publication = get_sub_field('titre_publication');
-		$fluxi_content_publication = '';	
+		//$titre_publication = get_sub_field('titre_publication');
+		$link_dl = get_sub_field('fluxi_publi_fichier');
 
-		if( $titre_publication ):
+		if ( $link_dl ) :
 
 			$visuel = get_sub_field('visuel');
+			$visuel_url = $visuel['sizes']['medium'];
 
-			$fluxi_content_publication = '<a href="'.get_sub_field('url_publication').'" class="c-newsH fc-item fc__publication">';
-			$fluxi_content_publication .= '<div class="c-newsH__img" style="background-image: url('.$visuel['sizes']['thumbnail'].')"></div>';
-			$fluxi_content_publication .= '<div class="c-newsH__body">';
-			$fluxi_content_publication .= '<span class="c-newsH__body__meta">Publication</span>';
-			$fluxi_content_publication .= '<h1 class="c-newsH__body__title">'.$titre_publication.'</h1>';
-			if (get_sub_field('description')) {
-				$fluxi_content_publication .= '<p class="c-newsH__body__desc">'.get_sub_field('description').'</p>';
-			}
-			$fluxi_content_publication .= '<span class="c-link c-link--more c-newsH__body__link" target="_blank">Consulter la publication</span>';
+			$fluxi_content_publication = '<div class="fc-item l-centerCol c-publication">';
+				$fluxi_content_publication .= '<div class="c-publication__couverture" style="background-image: url('.$visuel_url.')">';
+					$fluxi_content_publication .= '<div class="c-publication__couverture__decor"></div>';
+					$fluxi_content_publication .= '<div class="c-publication__couverture__reliure"></div>';
+				$fluxi_content_publication .= '</div>';
+				$fluxi_content_publication .= '<div class="c-publication__button">';
+					$fluxi_content_publication .= '<a href="'.$link_dl.'" class="c-button c-button--cta" target="_blank"><i class="icon-download c-button__icon"></i>Télécharger</a>';
+				$fluxi_content_publication .= '</div>';
 			$fluxi_content_publication .= '</div>';
-			$fluxi_content_publication .= '</a>';
 
 			return $fluxi_content_publication;
 			
