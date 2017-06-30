@@ -23,24 +23,23 @@
 		if( $galerie ):
 
 			if( $type_galerie == 'galerie_damier' ): 
-		        $fluxi_content_galerie .= '<aside class="fc__gallery"><div class="c-gallery js-gallery-damier">';
+		        $fluxi_content_galerie .= '<aside class="fc-gallery fc-item"><div class="c-gallery js-gallery-damier">';
 					foreach( $galerie as $image ):
-						($isMobile) ? $img_size = 'thumb2x' : $img_size = 'thumbnail';
-						$fluxi_content_galerie .= '<a href="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes'][$img_size].'" alt="'.$image['alt'].'" class="c-gallery__img" /></a>';
+						$fluxi_content_galerie .= '<a href="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></a>';
 		            endforeach;
 		        $fluxi_content_galerie .= '</div></aside>';
 
 			elseif( $type_galerie == 'galerie_vignettes' ):
-				$fluxi_content_galerie .= '<aside class="fc__gallery"><ul class="c-gallery js-gallery-vignettes">';
+				$fluxi_content_galerie .= '<aside class="fc-gallery fc-item"><ul class="c-gallery js-gallery-vignettes">';
 					foreach( $galerie as $image ):
-						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
+						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
 					endforeach;
 				$fluxi_content_galerie .= '</ul></aside>';
 
 			else:
-				$fluxi_content_galerie .= '<aside class="fc__gallery"><ul class="c-gallery js-gallery-slider">';
+				$fluxi_content_galerie .= '<aside class="fc-gallery fc-item"><ul class="c-gallery js-gallery-slider">';
 					foreach( $galerie as $image ):
-						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
+						$fluxi_content_galerie .= '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'"><img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'" class="c-gallery__img" /></li>';
 					endforeach;
 				$fluxi_content_galerie .= '</ul></aside>';
 
