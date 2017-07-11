@@ -28,7 +28,7 @@
 			$fluxi_content_publication .=  '<div class="c-separator__line"></div>';
 			$fluxi_content_publication .=  '</div>';
 
-			$fluxi_content_publication .= '<div class="l-centerCol c-publication mgnTop--m">';
+			$fluxi_content_publication .= '<a href="'.$link_dl.'" class="l-centerCol c-publication mgnTop--m" target="_blank">';
 				$fluxi_content_publication .= '<div class="c-publication__couverture" style="background-image: url('. $visuel_url .')">';
 					$fluxi_content_publication .= '<div class="c-publication__couverture__decor"></div>';
 					$fluxi_content_publication .= '<div class="c-publication__couverture__reliure"></div>';
@@ -36,7 +36,7 @@
 				$fluxi_content_publication .= '<div class="c-publication__button">';
 					$fluxi_content_publication .= '<a href="'.$link_dl.'" class="c-button c-button--cta" target="_blank"><i class="icon-download c-button__icon"></i>Télécharger</a>';
 				$fluxi_content_publication .= '</div>';
-			$fluxi_content_publication .= '</div>';
+			$fluxi_content_publication .= '</a>';
 
 			$fluxi_content_publication .= '</div>';
 
