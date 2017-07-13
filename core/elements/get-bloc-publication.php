@@ -13,13 +13,12 @@
 
 	function get_bloc_publication(){
 			
-		//$titre_publication = get_sub_field('titre_publication');
 		$link_dl = get_sub_field('fluxi_publi_fichier');
 
 		if ( $link_dl ) :
 
 			$visuel = get_sub_field('visuel');
-			$visuel_url = $visuel['sizes']['medium'];
+			$visuel_url = $visuel['sizes']['publication'];
 
 			$fluxi_content_publication =  '<div class="fc-item">';
 
