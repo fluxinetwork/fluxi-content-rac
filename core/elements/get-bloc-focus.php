@@ -17,7 +17,16 @@
 
 		if( $fluxi_content_focus ):
 
-			$fluxi_content_focus = '<div class="fc-item fc-focus"><div class="fc-focus__content l-postHeader">';
+			if ( get_field('groupe_de_dossier') == 'cop23' ) :
+
+				$fluxi_content_focus = '<div class="fc-item fc-focus fc-focus--cop23"><div class="fc-focus__content l-postHeader">';
+				$fluxi_content_focus .= '<img src="'. get_bloginfo('template_url') .'/app/img/fossil-of-the-day.png" class="fc-focus__content__img">';
+
+			else :
+
+				$fluxi_content_focus = '<div class="fc-item fc-focus"><div class="fc-focus__content l-postHeader">';
+
+			endif;
 
 			$fluxi_content_focus .= '<h2 class="l-postHeader__title t-post-title">'.get_sub_field('titre_focus').'</h2>';
 			$fluxi_content_focus .= '<p class="l-postHeader__excerpt t-post-excerpt">'.get_sub_field('texte_focus').'</p>';
