@@ -17,9 +17,9 @@
 
 		if( $fluxi_content_focus ):
 
-			if ( get_field('groupe_de_dossier') == 'cop23' ) :
+			if ( get_field('groupe_de_dossier') == 'cop' ) :
 
-				$fluxi_content_focus = '<div class="fc-item fc-focus fc-focus--cop23"><div class="fc-focus__content l-postHeader">';
+				$fluxi_content_focus = '<div class="fc-item fc-focus fc-focus--cop"><div class="fc-focus__content l-postHeader">';
 				$fluxi_content_focus .= '<img src="'. get_bloginfo('template_url') .'/app/img/fossil-of-the-day.png" class="fc-focus__content__img">';
 
 			else :
