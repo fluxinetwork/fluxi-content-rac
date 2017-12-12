@@ -189,7 +189,7 @@ if( ! class_exists('fluxicontent') ) :
 		    	|| get_post_type($post_id) == 'outils' 
 		    	|| get_post_type($post_id) == 'solutions'
 		    	|| get_post_type($post_id) == 'dossiers'
-		    	|| get_post_type($post_id) == 'assos-membres' ):
+		    	|| get_post_type($post_id) == 'assos-membres'
 		    	|| get_post_type($post_id) == 'initiatives' ):
 		    	// If there is no ACF
 			 	if( empty($_POST['acf']) )
