@@ -18,7 +18,7 @@
 		if( $fluxi_content_lien ):
 
 			if( get_sub_field('afficher_bouton') == 1 ):
-				$fluxi_content_lien = '<p class="fc-link"><a class="c-button c-button--ghost" href="'.get_sub_field('url_lien').'">'.get_sub_field('texte_lien').'</a></p>';
+				$fluxi_content_lien = '<p class="fc-link fc-link--bt"><a class="c-button c-button--ghost" href="'.get_sub_field('url_lien').'">'.get_sub_field('texte_lien').'</a></p>';
 			else:
 				$fluxi_content_lien = '<p class="fc-link"><a class="c-link" href="'.get_sub_field('url_lien').'">'.get_sub_field('texte_lien').'</a></p>';
 			endif;
