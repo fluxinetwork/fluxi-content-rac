@@ -160,12 +160,12 @@ if( ! class_exists('fluxicontent') ) :
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-chiffre-cle.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-galerie.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-code.php' );
-	//require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-contact.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-publication.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-focus.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-lien.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-chiffre-cle.php' );
 	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-accordeon.php' );
+	require_once( FC_PLUGIN_DIR . 'core/elements/get-bloc-image-texte.php' );
 
 	/**
 	 * fluxi_content_save
@@ -293,6 +293,9 @@ if( ! class_exists('fluxicontent') ) :
 
 					elseif ( get_row_layout() == 'chiffre_cle' ):
 						$all_fluxi_content .= get_bloc_chiffre_cle();
+
+					elseif ( get_row_layout() == 'image_texte' ):
+						$all_fluxi_content .= get_bloc_image_texte();
 
 			        endif;
 
