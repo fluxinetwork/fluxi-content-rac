@@ -122,7 +122,7 @@ if( ! class_exists('fluxicontent') ) :
 			wp_register_script( 'lightgallery', FC_PLUGIN_URL . 'assets/js/vendors/lg-1-lightgallery.min.js', array(), null, true );
 
 			// fluxicontent
-			wp_register_script( 'fluxicontent', FC_PLUGIN_URL . 'assets/js/fluxicontent.js', array('jQuery','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','lg-video','lightgallery'), null, true );
+			wp_register_script( 'fluxicontent', FC_PLUGIN_URL . 'assets/js/fluxicontent.js', array('jquery','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','lg-video','lightgallery'), null, true );
 
 
 			// Enqueue
