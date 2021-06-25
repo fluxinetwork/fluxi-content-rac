@@ -91,7 +91,7 @@ if( ! class_exists('fluxicontent') ) :
 			
 			// Remove post type support			 
 			remove_post_type_support( 'post', 'editor' );
-			remove_post_type_support( 'page', 'editor' );
+			//remove_post_type_support( 'page', 'editor' );
 
 			// Remove auto formating
 			remove_filter( 'the_content', 'wpautop' );
@@ -216,7 +216,7 @@ if( ! class_exists('fluxicontent') ) :
 					array(
 						'ID' => $post_id,
 						'post_content' => $the_fluxi_content,
-						'post_excerpt' => $extrait
+						//'post_excerpt' => $extrait
 					)
 				);
 		    	// Re-hook fluxi_content_save
